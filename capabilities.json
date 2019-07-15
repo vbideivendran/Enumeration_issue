@@ -1,0 +1,340 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Axis",
+            "kind": "Grouping",
+            "name": "category",
+            "description": "Fields to place on the horizontal or Vertical Axis"
+        },
+        {
+            "displayName": "Legend",
+            "kind": "Grouping",
+            "name": "legend",
+            "description": "The categorical field to show for color"
+        },
+        {
+            "displayName": "Value Axis 1",
+            "kind": "Measure",
+            "name": "value1",
+            "description": "The numeric amount to plot",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Value Axis 2",
+            "kind": "Measure",
+            "name": "value2",
+            "description": "The numeric amount to plot",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Value Axis 3",
+            "kind": "Measure",
+            "name": "value3",
+            "description": "The numeric amount to plot",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Value Axis 4",
+            "kind": "Measure",
+            "name": "value4",
+            "description": "The numeric amount to plot",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Value Axis 5",
+            "kind": "Measure",
+            "name": "value5",
+            "description": "The numeric amount to plot",
+            "requiredTypes": [
+                {
+                    "numeric": true
+                },
+                {
+                    "integer": true
+                }
+            ]
+        },
+        {
+            "displayName": "Tooltips",
+            "kind": "Measure",
+            "name": "tmeasure",
+            "description": "Tooltip"
+        }
+    ],
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    },
+                    "for": {
+                        "in": "category"
+                    }
+                },
+                "values": {
+                    "group": {
+                        "by": "legend",
+                        "select": [
+                            {
+                                "bind": {
+                                    "to": "value1"
+                                }
+                            },
+                            {
+                                "bind": {
+                                    "to": "value2"
+                                }
+                            },
+                            {
+                                "bind": {
+                                    "to": "value3"
+                                }
+                            },
+                            {
+                                "bind": {
+                                    "to": "value4"
+                                }
+                            },
+                            {
+                                "bind": {
+                                    "to": "value5"
+                                }
+                            },
+                            {
+                                "bind": {
+                                    "to": "tmeasure"
+                                }
+                            }
+                        ]
+                    }
+                }
+            },
+            "conditions": [
+                {
+                    "legend": {
+                        "max": 1
+                    }
+                }
+            ]
+        }
+    ],
+    "drilldown": {
+        "roles": [
+            "category"
+        ]
+    },
+    "objects": {
+        "globalFonts": {
+            "displayName": "Global Fonts",
+            "properties": {
+                "fontfamily": {
+                    "description": "",
+                    "displayName": "Font Family",
+                    "placeHolderText": "",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Standard for numbers",
+                                "value": "Lucida Grande, Lucida Sans Unicode, Arial, Helvetica, sans-serif"
+                            },
+                            {
+                                "displayName": "Arial",
+                                "value": "Arial, Helvetica, sans-serif"
+                            },
+                            {
+                                "displayName": "Arial Black",
+                                "value": "\"Arial Black\""
+                            },
+                            {
+                                "displayName": "Arial Unicode MS",
+                                "value": "\"Arial Unicode MS\""
+                            },
+                            {
+                                "displayName": "Calibri",
+                                "value": "Calibri"
+                            },
+                            {
+                                "displayName": "Cambria",
+                                "value": "Cambria"
+                            },
+                            {
+                                "displayName": "Cambria Math",
+                                "value": "\"Cambria Math\""
+                            },
+                            {
+                                "displayName": "Candara",
+                                "value": "Candara"
+                            },
+                            {
+                                "displayName": "Comic Sans MS",
+                                "value": "\"Comic Sans MS\""
+                            },
+                            {
+                                "displayName": "Consolas",
+                                "value": "Consolas"
+                            },
+                            {
+                                "displayName": "Constantia",
+                                "value": "Constantia"
+                            },
+                            {
+                                "displayName": "Corbel",
+                                "value": "Corbel"
+                            },
+                            {
+                                "displayName": "Courier New",
+                                "value": "\"Courier New\""
+                            },
+                            {
+                                "displayName": "Georgia",
+                                "value": "Georgia"
+                            },
+                            {
+                                "displayName": "Lucida Sans Unicode",
+                                "value": "\"Lucida Sans Unicode\""
+                            },
+                            {
+                                "displayName": "Segoe (Bold)",
+                                "value": "\"Segoe UI Bold\", wf_segoe-ui_bold, helvetica, arial, sans-serif"
+                            },
+                            {
+                                "displayName": "Segoe UI",
+                                "value": "\"Segoe UI\", wf_segoe-ui_normal, helvetica, arial, sans-serif"
+                            },
+                            {
+                                "displayName": "Segoe UI Light",
+                                "value": "\"Segoe UI Light\", wf_segoe-ui_bold, helvetica, arial, sans-serif"
+                            },
+                            {
+                                "displayName": "Symbol",
+                                "value": "Symbol"
+                            },
+                            {
+                                "displayName": "Tahoma",
+                                "value": "Tahoma"
+                            },
+                            {
+                                "displayName": "Times New Roman",
+                                "value": "\"Times New Roman\""
+                            },
+                            {
+                                "displayName": "Trebuchet MS",
+                                "value": "\"Trebuchet MS\""
+                            },
+                            {
+                                "displayName": "Verdana",
+                                "value": "Verdana"
+                            },
+                            {
+                                "displayName": "Wingdings",
+                                "value": "Wingdings"
+                            }
+                        ]
+                    }
+                }
+            }
+        },
+        "series": {
+            "displayName": "Series Type",
+            "properties": {
+                "seriesType": {
+                    "description": "",
+                    "displayName": "Series Type",
+                    "placeHolderText": "",
+                    "type": {
+                        "enumeration": [
+                            {
+                                "displayName": "Column",
+                                "value": "column"
+                            },
+                            {
+                                "displayName": "Column Stacked",
+                                "value": "column-stacked"
+                            },
+                            {
+                                "displayName": "Column Stacked Percent",
+                                "value": "column-stacked-percent"
+                            },
+                            {
+                                "displayName": "Line",
+                                "value": "line"
+                            },
+                            {
+                                "displayName": "Spline",
+                                "value": "spline"
+                            },
+                            {
+                                "displayName": "Area",
+                                "value": "area"
+                            },
+                            {
+                                "displayName": "Area Stacked",
+                                "value": "area-stacked"
+                            },
+                            {
+                                "displayName": "Area Stacked Percent",
+                                "value": "area-stacked-percent"
+                            },
+                            {
+                                "displayName": "Area Spline",
+                                "value": "areaspline"
+                            },
+                            {
+                                "displayName": "Area Spline Stacked",
+                                "value": "areaspline-stacked"
+                            },
+                            {
+                                "displayName": "Area Spline Stacked Percent",
+                                "value": "areaspline-stacked-percent"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "supportsLandingPage": true,
+    "sorting": {
+        "default": {}
+    },
+    "supportsHighlight": true,
+    "supportsSynchronizingFilterState": true,
+    "tooltips": {
+        "roles": [
+            "tooltips"
+        ],
+        "supportedTypes": {
+            "canvas": true,
+            "default": true
+        }
+    }
+}
